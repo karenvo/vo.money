@@ -1,0 +1,33 @@
+{
+  "articles": [
+    {
+      "id": "cheeseman",
+      "title": "Cheese-man",
+      "date": "2026-01-10",
+      "file": "posts/cats/cheeseman.md",
+      "topic": "cats",
+      "tags": [],
+      "status": "published"
+    },
+    {
+      "id": "readme",
+      "title": "XSOAR Series: Getting Started with Cortex XSOAR",
+      "date": "2026-01-10",
+      "file": "posts/automation/xsoar-series-about/README.md",
+      "topic": "automation",
+      "tags": [],
+      "status": "published"
+    }
+  ],
+  "directories": [
+    "automation",
+    "cats",
+    "cloud-stuff",
+    "oscp",
+    "redteam",
+    "security-notes",
+    "xsoar-series-about",
+    "xsoar-series-developer",
+    "xsoar-use-cases"
+  ]
+}

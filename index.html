@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vomoney@terminal:~$</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=1">
+    <link rel="stylesheet" href="assets/css/cli.css?v=1">
+    <link rel="stylesheet" href="assets/css/desktop.css?v=1">
+</head>
+<body class="no-vhs">
+    <div class="crt-screen">
+        <div class="vhs-overlay"></div>
+        <div class="noise"></div>
+        
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" id="resume-icon" title="Resume">
+                <div class="icon-image">📄</div>
+                <div class="icon-label">Resume</div>
+            </div>
+            <div class="desktop-icon" id="articles-icon" title="Articles">
+                <div class="icon-image">📁</div>
+                <div class="icon-label">Articles</div>
+            </div>
+            <div class="desktop-icon" id="playlists-icon" title="Playlists">
+                <div class="icon-image">🎵</div>
+                <div class="icon-label">Playlists</div>
+            </div>
+        </div>
+        
+        <!-- Popup Windows -->
+        <div id="resume-popup" class="popup-window" style="display: none;">
+            <div class="popup-header">
+                <span class="popup-title">Resume / CV</span>
+                <div class="popup-window-controls">
+                    <button class="popup-window-btn" title="Minimize">−</button>
+                    <button class="popup-window-btn" title="Maximize">□</button>
+                    <button class="popup-close" data-popup="resume-popup" title="Close">✕</button>
+                </div>
+            </div>
+            <div class="popup-content" id="resume-content">
+                <div class="loading-text">Loading resume...</div>
+            </div>
+        </div>
+        
+        <div id="articles-popup" class="popup-window" style="display: none;">
+            <div class="popup-header">
+                <span class="popup-title">Blog Articles</span>
+                <div class="popup-window-controls">
+                    <button class="popup-window-btn" title="Minimize">−</button>
+                    <button class="popup-window-btn" title="Maximize">□</button>
+                    <button class="popup-close" data-popup="articles-popup" title="Close">✕</button>
+                </div>
+            </div>
+            <div class="popup-content" id="articles-content">
+                <div class="loading-text">Loading articles...</div>
+            </div>
+        </div>
+
+        <div id="playlists-popup" class="popup-window winamp-window" style="display: none;">
+            <div class="popup-header winamp-header">
+                <span class="popup-title">Winamp - Playlists</span>
+                <div class="popup-window-controls">
+                    <button class="popup-window-btn" title="Minimize">−</button>
+                    <button class="popup-window-btn" title="Maximize">□</button>
+                    <button class="popup-close" data-popup="playlists-popup" title="Close">✕</button>
+                </div>
+            </div>
+            <div class="popup-content winamp-content" id="playlists-content">
+                <div class="winamp-controls">
+                    <label for="playlist-select" class="winamp-label">Select playlist</label>
+                    <select id="playlist-select" class="winamp-select"></select>
+                </div>
+                <div class="winamp-now-playing" id="playlist-now-playing">Ready</div>
+                <div class="winamp-player">
+                    <iframe
+                        id="playlist-iframe"
+                        title="YouTube playlist"
+                        width="100%"
+                        height="315"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="terminal-container glitch-container">
+            <div class="glitch" data-text="vomoney@terminal:~$">vomoney@terminal:~$</div>
+            
+            <div class="terminal-header">
+                <span class="terminal-title">
+                    <span id="typing-text"></span><span class="blink-cursor">█</span>
+                </span>
+                <div class="terminal-window-controls">
+                    <button class="terminal-minimize-btn" id="terminal-minimize-btn" title="Minimize">−</button>
+                    <button class="terminal-maximize-btn" id="terminal-maximize-btn" title="Maximize">□</button>
+                </div>
+            </div>
+            
+            <div id="terminal-output" class="terminal-output">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+            
+            <div class="terminal-input-line">
+                <span class="prompt" id="terminal-prompt">vomoney@terminal:~$</span>
+                <input type="text" id="terminal-input" class="terminal-input" autofocus autocomplete="off" spellcheck="false">
+                <span class="input-cursor blink-cursor">█</span>
+            </div>
+        </div>
+        
+        <div class="retro-footer" aria-hidden="true"></div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="assets/js/cli.js?v=2"></script>
+    <script src="assets/js/effects.js?v=1"></script>
+    <script src="assets/js/desktop.js?v=2"></script>
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor/IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Optional: Keep data files, assets, and scripts
+# (These are intentionally NOT ignored as they're part of the site)
+
+# Draft content (local only)
+posts/_drafts/
+data/_drafts/
+
+# Scripts (local only)
+scripts/
+bin/
+
+# Local docs
+README.md
+SECURITY.md
+data/content-index.json
+data/indexer.json

@@ -1,0 +1,17 @@
+{
+  "generated": "2026-02-28T11:19:50.487Z",
+  "files": [
+    "posts/automation/xsoar-series-about/README.md",
+    "posts/cats/cheeseman.md"
+  ],
+  "directories": [
+    "posts/automation",
+    "posts/automation/xsoar-series-about",
+    "posts/automation/xsoar-series-developer",
+    "posts/automation/xsoar-use-cases",
+    "posts/cats",
+    "posts/cloud-stuff",
+    "posts/redteam",
+    "posts/redteam/oscp"
+  ]
+}

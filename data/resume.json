@@ -1,0 +1,192 @@
+{
+    "name": "Karen Vo",
+    "email": "karen@vo.money",
+    "location": "Cyberspace",
+    "image": "data/images/me.jpeg",
+    "imageStatus": "draft",
+    "summary": "Cybersecurity practitioner with 5+ years of experience spanning security automation, cloud red teaming, and detection engineering. Known for building automation that delivers measurable results—94% reduction in alert noise, 85% faster response times—while designing analyst-facing interfaces that actually get used. Translates offensive techniques directly into defensive controls through dual-track red team and detection engineering work.",
+    "achievements": [
+      "Reduced phishing alert volume by 94% through automated severity classification using multi-source log correlation (Entra ID sign-in logs, Graph Activity logs) and threat intelligence enrichment—eliminating spam while preserving high-fidelity threats",
+      "Improved incident response times by 85% by architecting SOAR playbooks with intuitive analyst interfaces, reducing cognitive load during triage",
+      "Contributed custom integrations to the XSOAR Marketplace, extending platform capabilities for the broader community",
+      "Executed cloud red team engagements identifying critical Azure/AWS security gaps, then authored corresponding detection rules to close identified attack paths"
+    ],
+    "skills": {
+      "Red Team & Offensive": [
+        "Cloud red teaming (it's pretty fun)",
+        "Adversary emulation",
+        "Purple team operations",
+        "Vulnerability assessment",
+        "CobaltStrike",
+        "Sliver",
+        "Loki C2",
+        "Metasploit",
+        "Burp Suite",
+        "Kali Linux",
+        "NMAP"
+      ],
+      "Detection Engineering": [
+        "KQL (Kusto Query Language)",
+        "Splunk SPL",
+        "Log Ingestion and Correlation"
+      ],
+      "Automation & SOAR": [
+        "Cortex XSOAR (playbooks, custom integrations, UI design)",
+        "Security workflow automation",
+        "API development and integration",
+        "MCP server development",
+        "Analyst interface design"
+      ],
+      "Programming": [
+        "Python (primary)",
+        "PowerShell",
+        "Bash",
+        "JavaScript",
+        "Ruby",
+        "SQL",
+        "MATLAB",
+        "JSON",
+        "XML",
+        "YAML",
+        "Git",
+        "Azure DevOps"
+      ],
+      "Security Tools": [
+        "Splunk (IR/ES/Phantom)",
+        "SentinelOne",
+        "Tanium",
+        "Proofpoint",
+        "Armis",
+        "FireEye",
+        "Wireshark",
+        "Brinqa",
+        "Axonius",
+        "Wiz"
+      ],
+      "AI/ML": [
+        "Local LLM deployment",
+        "Azure AI Foundry",
+        "AI agent development",
+        "Mathematical foundations (linear algebra, statistics)"
+      ],
+      "Platforms": [
+        "Linux",
+        "Windows",
+        "ServiceNow (I prefer not to)",
+        "XSOAR",
+        "Power Automate",
+        "Azure DevOps"
+      ]
+    },
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "role": "Cybersecurity Senior Specialist",
+        "company": "Undisclosed",
+        "details": [
+          "Lead security automation engineering and red team operations, building AI-powered solutions for threat detection, response orchestration, and attack simulation",
+          "Design and develop end-to-end XSOAR automation—from Python API integrations and playbook logic to analyst-facing UI components—prioritizing usability alongside functionality",
+          "Execute cloud red team engagements (Azure, AWS) and translate findings into detection rules, closing the loop between offensive discovery and defensive coverage",
+          "Build automated severity classification using log correlation across Entra ID sign-in logs, Graph Activity logs, and threat intelligence feeds to separate real threats from noise",
+          "Develop custom integrations connecting security tools via REST APIs, enabling automated IOC enrichment and cross-platform orchestration workflows",
+          "Create external asset reconnaissance tooling for red team engagements, automating discovery and vulnerability identification at scale"
+        ]
+      },
+      {
+        "period": "2023",
+        "role": "Cybersecurity Specialist",
+        "company": "Undisclosed",
+        "details": [
+          "Advanced automation program development and detection engineering initiatives",
+          "Expanded SOAR playbook coverage across additional security domains"
+        ]
+      },
+      {
+        "period": "2021 - 2023",
+        "role": "Cybersecurity Associate Specialist",
+        "company": "Undisclosed",
+        "details": [
+          "Built and deployed automation solutions across CSOC operations, achieving 85% improvement in incident response times through workflow optimization",
+          "Developed custom XSOAR integrations connecting disparate security tools (SIEM, EDR, threat intel platforms), enabling unified workflows and reducing manual handoffs",
+          "Designed CTF competitions and tabletop exercises for team development and large-scale incident preparedness",
+          "Performed vulnerability assessments and penetration testing using Burp Suite, HCL AppScan, and SAST/DAST tooling"
+        ]
+      },
+      {
+        "period": "2020 - 2021",
+        "role": "Cybersecurity Intern",
+        "company": "Undisclosed",
+        "details": [
+          "Investigated Tier I/II security alerts across phishing, malware, and network intrusion categories",
+          "Conducted threat hunting using Splunk, researching emerging threats and executing IOC blocks",
+          "Collaborated with different cybersecurity teams on vendor compromise investigations"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "period": "2022",
+        "degree": "Undergraduate Certificate",
+        "school": "SANS Institute",
+        "focus": "Cybersecurity"
+      },
+      {
+        "period": "2020",
+        "degree": "Master of Science",
+        "school": "Western Governors University",
+        "focus": "Cybersecurity"
+      },
+      {
+        "period": "2019",
+        "degree": "Master of Science",
+        "school": "University of Southern California",
+        "focus": "Petroleum Engineering, Engineering Management"
+      },
+      {
+        "period": "2017",
+        "degree": "Bachelor of Science",
+        "school": "California State University, Northridge",
+        "focus": "Chemistry, Mathematics"
+      }
+    ],
+    "certifications": [
+      {
+        "period": "Pending",
+        "certification": "OSCP",
+        "organization": "Offensive Security"
+      },
+      {
+        "period": "05/2022 - 05/2026",
+        "certification": "GWAPT",
+        "organization": "SANS Institute"
+      },
+      {
+        "period": "11/2021 - 11/2025",
+        "certification": "GCIH",
+        "organization": "SANS Institute"
+      },
+      {
+        "period": "08/2022 - 08/2026",
+        "certification": "GCFE",
+        "organization": "SANS Institute"
+      },
+      {
+        "period": "07/2021 - 07/2025",
+        "certification": "GSEC",
+        "organization": "SANS Institute"
+      },
+      {
+        "period": "07/2021 - 07/2025",
+        "certification": "GFACT",
+        "organization": "SANS Institute"
+      }
+    ],
+    "publications": [
+      "O.J. Nielsen, C.L. Carstens, J.W. Lengkong, K.L.Vo, S.T. Andersen, and M.P.S. Andersen, \"Atmospheric Chemistry of CH3(CH2)4CN: Kinetics and products of the gas-phase reactions with Cl atoms and OH radicals\"",
+      "M.S. Andersen, J.W. Lengkong, K.L.Vo, J. Wallberg, F. Hasager, S. Andersen, H. Kjaegaard, T. Wallington, O.J Nielsen, \"UV Photolysis and Kinetics and Mechanisms of the reactions of Cl atoms and OH radicals with Hexa- and Penta-Fluorobenzene\". Physical Chemistry Chemical Physics."
+    ],
+    "xsoar_marketplace_contributions": [
+      "Brinqa Integration Pack",
+      "AD - !test-credentials"
+    ]
+  }
