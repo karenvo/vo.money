@@ -21,10 +21,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      
-      - name: Generate posts-index.json
-        run: |
-          node scripts/generate-posts-index.js
+    
+      - name: Generate posts index
+        run: node scripts/generate-posts-index.js
+        working-directory: ${{ github.workspace }}
       
       - name: Check for changes
         id: verify-changed-files
