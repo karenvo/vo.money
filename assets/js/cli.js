@@ -492,7 +492,33 @@ Examples:
                     return article.file.startsWith(dirPath + '/');
                 });
                 output += `  [${String(index + 1).padStart(2, '0')}] ${dir}/\n`;
-                output += `      Articles: ${dirArticles.length}\n\n`;
+                output += `      Articles: ${dirArticles.length}\n`;
+                if (dirArticles.length > 0) {
+                    const grouped = new Map();
+                    dirArticles.forEach(article => {
+                        const relative = article.file.replace(dirPath + '/', '');
+                        const parts = relative.split('/');
+                        const groupKey = parts.length > 1 ? parts[0] : '.';
+                        if (!grouped.has(groupKey)) {
+                            grouped.set(groupKey, []);
+                        }
+                        if (article.title) {
+                            grouped.get(groupKey).push(article.title);
+                        }
+                    });
+
+                    grouped.forEach((titles, groupKey) => {
+                        const label = groupKey === '.' ? dir : `${dir}/${groupKey}`;
+                        output += `      ${label}/\n`;
+                        output += `      .. articles:\n`;
+                        titles.forEach((title, articleIndex) => {
+                            output += `      ${String(articleIndex + 1).padStart(2, '0')}. ${title}\n`;
+                        });
+                        output += '\n';
+                    });
+                } else {
+                    output += '\n';
+                }
             });
         }
         
@@ -501,8 +527,8 @@ Examples:
             files.forEach((file, index) => {
                 const article = this.getArticleByFile(file);
                 if (article) {
-                    output += `  [${String(directories.length + index + 1).padStart(2, '0')}] ${this.getFileName(file)}\n`;
-                    output += `      Title: ${article.title}\n`;
+                    output += `  [${String(directories.length + index + 1).padStart(2, '0')}] ${article.title}\n`;
+                    output += `      File: ${this.getFileName(file)}\n`;
                     output += `      Date:  ${article.date}\n`;
                     output += `      Status: ${article.status || 'published'}\n`;
                     if (article.tags && article.tags.length > 0) {
@@ -1060,7 +1086,9 @@ Examples:
                 
                 if (article) {
                     html += `<h2>${this.escapeHtml(article.title)}</h2>`;
-                    html += `<p>Date: ${this.escapeHtml(article.date)} | Tags: ${article.tags.map(t => this.escapeHtml(t)).join(', ')}</p>`;
+                    const safeTags = article.tags.map(t => this.escapeHtml(t)).join(', ');
+                    const safeUrl = article.url ? ` | URL: ${this.escapeHtml(article.url)}` : '';
+                    html += `<p>Date: ${this.escapeHtml(article.date)} | Tags: ${safeTags}${safeUrl}</p>`;
                 } else {
                     html += `<h2>${this.escapeHtml(this.getFileName(filePath))}</h2>`;
                     html += `<p>File: ${this.escapeHtml(filePath)}</p>`;
@@ -1130,7 +1158,11 @@ Examples:
                     let output = '\n';
                     output += '═'.repeat(60) + '\n';
                     output += `${article.title}\n`;
-                    output += `Date: ${article.date} | Tags: ${article.tags.join(', ')}\n`;
+                    output += `Date: ${article.date} | Tags: ${article.tags.join(', ')}`;
+                    if (article.url) {
+                        output += ` | URL: ${article.url}`;
+                    }
+                    output += '\n';
                     output += '═'.repeat(60) + '\n\n';
                     output += '[Article preview - content file not found]\n\n';
                     output += `File: ${article.file}\n`;
@@ -1148,7 +1180,11 @@ Examples:
                 let output = '\n';
                 output += '═'.repeat(60) + '\n';
                 output += `${article.title}\n`;
-                output += `Date: ${article.date} | Tags: ${article.tags.join(', ')}\n`;
+                output += `Date: ${article.date} | Tags: ${article.tags.join(', ')}`;
+                if (article.url) {
+                    output += ` | URL: ${article.url}`;
+                }
+                output += '\n';
                 output += '═'.repeat(60) + '\n\n';
                 output += '[Article preview]\n\n';
                 output += `File: ${article.file}\n`;

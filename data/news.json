@@ -1,0 +1,15 @@
+{
+  "updated": "2026-04-27",
+  "items": [
+    {
+      "date": "2026-04-16",
+      "title": "OffSec MCP Challenge",
+      "body": "My AI tool XORA won first place! Yay! Check it out in my github."
+    },
+    {
+      "date": "2026-04-27",
+      "title": "Intro: SOAR + RAG walkthroughs",
+      "body": "A series that deep dives on ADLS, Azure AI Search, Foundry agents, and SOAR integrations. Transform your SOAR with a RAG :))"
+    }
+  ]
+}

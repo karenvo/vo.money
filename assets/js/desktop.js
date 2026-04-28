@@ -38,6 +38,13 @@ class DesktopManager {
         if (playlistsIcon) {
             playlistsIcon.addEventListener('click', () => this.openPlaylistsPopup());
         }
+
+        const notesIcon = document.getElementById('notes-icon');
+        if (notesIcon) {
+            notesIcon.addEventListener('click', () => this.openNotesPopup());
+        }
+
+        this.showNotesDocked();
         
         // Close buttons
         document.querySelectorAll('.popup-close').forEach(btn => {
@@ -158,6 +165,63 @@ class DesktopManager {
             if (icon) icon.classList.add('selected');
 
             this.renderPlaylists();
+        }
+    }
+
+    openNotesPopup() {
+        const popup = document.getElementById('notes-popup');
+        if (popup) {
+            popup.style.display = 'flex';
+
+            const icon = document.getElementById('notes-icon');
+            if (icon) icon.classList.add('selected');
+
+            this.loadNotesContent();
+        }
+    }
+
+    showNotesDocked() {
+        const popup = document.getElementById('notes-popup');
+        if (popup) {
+            popup.style.display = 'flex';
+            this.loadNotesContent();
+        }
+    }
+
+    async loadNotesContent() {
+        const content = document.getElementById('notes-content');
+        if (!content) return;
+
+        try {
+            const cacheBust = `?v=${Date.now()}`;
+            const response = await fetch(`data/news.json${cacheBust}`);
+            if (!response.ok) {
+                content.innerHTML = '<div class="loading-text">No updates available.</div>';
+                return;
+            }
+
+            const data = await response.json();
+            const items = Array.isArray(data.items) ? data.items : [];
+            if (items.length === 0) {
+                content.innerHTML = '<div class="loading-text">No updates available.</div>';
+                return;
+            }
+
+            content.innerHTML = items.map(item => {
+                const date = this.escapeHtml(item.date || 'Update');
+                const title = this.escapeHtml(item.title || 'Update');
+                const body = this.escapeHtml(item.body || '');
+                return `
+                    <div class="notes-card">
+                        <div class="notes-date">${date}</div>
+                        <div class="notes-title">${title}</div>
+                        <div class="notes-body">${body}</div>
+                    </div>
+                `;
+            }).join('');
+        } catch (error) {
+            console.error('Failed to load notes:', error);
+            content.innerHTML = '<div class="loading-text">Failed to load updates.</div>';
         }
     }
     

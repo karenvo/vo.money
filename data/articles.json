@@ -6,8 +6,13 @@
       "date": "2026-04-28",
       "file": "posts/automation/ai-automation/Intro-SOAR-RAG-AI.md",
       "topic": "automation",
-      "tags": [],
-      "status": "published"
+      "tags": [
+        "soar",
+        "rag",
+        "ai"
+      ],
+      "status": "published",
+      "url": "https://vo.money/posts/automation/ai-automation/Intro-SOAR-RAG-AI.md"
     },
     {
       "id": "cheeseman",
@@ -16,7 +21,8 @@
       "file": "posts/cats/cheeseman.md",
       "topic": "cats",
       "tags": [],
-      "status": "published"
+      "status": "published",
+      "url": "https://vo.money/posts/cats/cheeseman.md"
     },
     {
       "id": "readme",
@@ -24,8 +30,13 @@
       "date": "2026-01-10",
       "file": "posts/automation/xsoar-series-about/README.md",
       "topic": "automation",
-      "tags": [],
-      "status": "published"
+      "tags": [
+        "automation",
+        "xsoar",
+        "cortex xsoar"
+      ],
+      "status": "published",
+      "url": "https://vo.money/posts/automation/xsoar-series-about/README.md"
     }
   ],
   "directories": [

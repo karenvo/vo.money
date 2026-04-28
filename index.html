@@ -27,6 +27,10 @@
                 <div class="icon-image">🎵</div>
                 <div class="icon-label">Playlists</div>
             </div>
+            <div class="desktop-icon" id="notes-icon" title="News & Updates">
+                <div class="icon-image">📝</div>
+                <div class="icon-label">News &amp; Updates</div>
+            </div>
         </div>
         
         <!-- Popup Windows -->
@@ -84,6 +88,20 @@
                         allowfullscreen>
                     </iframe>
                 </div>
+            </div>
+        </div>
+
+        <div id="notes-popup" class="popup-window notes-window" style="display: flex;">
+            <div class="popup-header notes-header">
+                <span class="popup-title">News &amp; Updates</span>
+                <div class="popup-window-controls">
+                    <button class="popup-window-btn" title="Minimize">−</button>
+                    <button class="popup-window-btn" title="Maximize">□</button>
+                    <button class="popup-close" data-popup="notes-popup" title="Close">✕</button>
+                </div>
+            </div>
+            <div class="popup-content notes-content" id="notes-content">
+                <div class="loading-text">Loading updates...</div>
             </div>
         </div>
         
