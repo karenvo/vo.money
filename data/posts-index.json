@@ -1,13 +1,13 @@
 {
   "generated": "2026-04-28T05:22:59.751Z",
   "files": [
-    "posts/automation/ai-automaton/Intro-SOAR-RAG-AI.md",
+    "posts/automation/ai-automation/Intro-SOAR-RAG-AI.md",
     "posts/automation/xsoar-series-about/README.md",
     "posts/cats/cheeseman.md"
   ],
   "directories": [
     "posts/automation",
-    "posts/automation/ai-automaton",
+    "posts/automation/ai-automation",
     "posts/automation/xsoar-series-about",
     "posts/automation/xsoar-series-developer",
     "posts/automation/xsoar-use-cases",
