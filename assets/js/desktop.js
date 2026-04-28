@@ -1022,8 +1022,51 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize click counter
     initClickCounter();
+
+    // Fallback: load notes even if CLI init is delayed
+    preloadNotes();
 });
 
+async function preloadNotes() {
+    const content = document.getElementById('notes-content');
+    if (!content || !content.textContent.includes('Loading')) {
+        return;
+    }
+    try {
+        const response = await fetch(`data/news.json?v=${Date.now()}`);
+        if (!response.ok) {
+            content.innerHTML = '<div class="loading-text">No updates available.</div>';
+            return;
+        }
+        const data = await response.json();
+        const items = Array.isArray(data.items) ? data.items : [];
+        if (items.length === 0) {
+            content.innerHTML = '<div class="loading-text">No updates available.</div>';
+            return;
+        }
+        content.innerHTML = items.map(item => {
+            const date = escapeHtmlStatic(item.date || 'Update');
+            const title = escapeHtmlStatic(item.title || 'Update');
+            const body = escapeHtmlStatic(item.body || '');
+            return `
+                <div class="notes-card">
+                    <div class="notes-date">${date}</div>
+                    <div class="notes-title">${title}</div>
+                    <div class="notes-body">${body}</div>
+                </div>
+            `;
+        }).join('');
+    } catch (error) {
+        console.error('Failed to preload notes:', error);
+        content.innerHTML = '<div class="loading-text">Failed to load updates.</div>';
+    }
+}
+
+function escapeHtmlStatic(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
 // Click Counter Feature - Coin Toss
 function initClickCounter() {
     let clickCount = 0;
