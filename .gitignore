@@ -51,7 +51,6 @@ build/
 .cache/
 
 # Optional: Keep data files, assets, and scripts
-# (These are intentionally NOT ignored as they're part of the site)
 
 # Draft content (local only)
 posts/_drafts/
@@ -62,8 +61,6 @@ scripts/
 bin/
 
 # Local docs
-README.md
-SECURITY.md
+ignore_me/
 data/content-index.json
 data/indexer.json
-data/README.md

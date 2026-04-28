@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "intro-soar-rag-ai",
+      "title": "Introduction to SOAR and Azure Foundry",
+      "date": "2026-04-28",
+      "file": "posts/automation/ai-automaton/Intro-SOAR-RAG-AI.md",
+      "topic": "automation",
+      "tags": [],
+      "status": "published"
+    },
+    {
       "id": "cheeseman",
       "title": "Cheese-man",
       "date": "2026-01-10",
@@ -20,6 +29,7 @@
     }
   ],
   "directories": [
+    "ai-automaton",
     "automation",
     "cats",
     "cloud-stuff",
